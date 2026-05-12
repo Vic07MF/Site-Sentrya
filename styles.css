@@ -1615,7 +1615,7 @@ a {
 
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr; 
   gap: 2rem;
   padding-bottom: 3rem;
   border-bottom: 1px solid var(--glass-border);
@@ -1625,7 +1625,8 @@ a {
 
 @media (min-width: 768px) {
   .footer-content {
-    grid-template-columns: 2fr repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr; 
+    align-items: start;
   }
 }
 
@@ -1661,7 +1662,16 @@ a {
 }
 
 .footer-links {
-  display: contents;
+  display: flex;
+  gap: 3rem; 
+  justify-content: flex-start; 
+}
+
+@media (min-width: 768px) {
+  .footer-links {
+    justify-content: flex-end; 
+    text-align: left;
+  }
 }
 
 .footer-column h4 {
